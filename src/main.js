@@ -93,6 +93,7 @@ Vue.mixin({
             // Return the workspace
             return workspace;
         },
+        // does this have any use anymore
         setLanguage(locale) {
             switch (locale) {
                 case "en":
@@ -118,6 +119,22 @@ Vue.mixin({
                     customLocalePT.applyBlocklyLocale();
                     // Change website languages (navbar, etc...)
                     this.$root.$i18n.locale = "pt";
+                    break;
+                    case "nl":
+                    // Change Blockly language for default blocks
+                    Blockly.setLocale(blocklyLocalePT);
+                    // Change Blockly language for custom blocks
+                    customLocalePT.applyBlocklyLocale();
+                    // Change website languages (navbar, etc...)
+                    this.$root.$i18n.locale = "nl";
+                    break;
+                    case "de":
+                    // Change Blockly language for default blocks
+                    Blockly.setLocale(blocklyLocalePT);
+                    // Change Blockly language for custom blocks
+                    customLocalePT.applyBlocklyLocale();
+                    // Change website languages (navbar, etc...)
+                    this.$root.$i18n.locale = "de";
                     break;
                 default:
                     break;
